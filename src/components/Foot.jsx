@@ -24,13 +24,13 @@ const Foot = () => {
             >
               <FaInstagram className="text-2xl hover:text-gray-400" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="#" rel="noopener noreferrer">
               <FaFacebook className="text-2xl hover:text-gray-400" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="#" rel="noopener noreferrer">
               <FaWhatsapp className="text-2xl hover:text-gray-400" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="#" rel="noopener noreferrer">
               <FaYoutube className="text-2xl hover:text-gray-400" />
             </a>
           </div>
@@ -47,7 +47,7 @@ const Foot = () => {
             href="https://www.instagram.com/uusaamaa_/"
             target="_blank"
             rel="noopener noreferrer"
-          >it warehouse</a>
+          >it_wrhs__</a>
         </div>
       </div>
     </footer>

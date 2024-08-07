@@ -77,7 +77,6 @@ const Head = () => {
         </a>
         <a
           href="#"
-          target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 lg:text-2xl md:text-2xl"
         >
@@ -85,7 +84,6 @@ const Head = () => {
         </a>
         <a
           href="#"
-          target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 lg:text-2xl md:text-2xl"
         >
@@ -93,7 +91,6 @@ const Head = () => {
         </a>
         <a
           href="#"
-          target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 lg:text-2xl md:text-2xl"
         >
