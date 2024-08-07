@@ -6,7 +6,7 @@ const Profil = () => {
         </h1>
         <div className="content-profil">
           <img
-            src="../../public/profil/profil.jpeg"
+            src="/profil/profil.jpeg"
             alt="Profil Pramuka SMAN 1 Poso"
             className="w-full max-w-[500px] lg:w-1/3 rounded-lg shadow-lg mb-6 lg:mb-4 lg:float-left lg:mr-6 mx-auto lg:mx-0 object-contain"
           />

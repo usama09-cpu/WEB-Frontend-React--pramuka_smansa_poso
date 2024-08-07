@@ -6,42 +6,42 @@ const StrukturOrganisasi = () => {
 
   const strukturData = [
     {
-      img: '../../public/strukturOrganisasi/list/muhammad farrel.png',
+      img: '/strukturOrganisasi/list/muhammad farrel.png',
       jabatan: 'Pradana PA',
       nama: 'Muhammad Farrel',
     },
     {
-      img: '../../public/strukturOrganisasi/list/Lasmatiur Aritonang.png',
+      img: '/strukturOrganisasi/list/Lasmatiur Aritonang.png',
       jabatan: 'Pradana PI',
       nama: 'Lasmatiur Aritonang',
     },
     {
-      img: '../../public/strukturOrganisasi/list/moh rizkhy.png',
+      img: '/strukturOrganisasi/list/moh rizkhy.png',
       jabatan: 'Juru Adat PA',
       nama: 'Moh Rizkhy',
     },
     {
-      img: '../../public/strukturOrganisasi/list/Azizah Azzahra.png',
+      img: '/strukturOrganisasi/list/Azizah Azzahra.png',
       jabatan: 'Juru Adat PI',
       nama: 'Azizah Azzahra',
     },
     {
-      img: '../../public/strukturOrganisasi/list/Ricky Alfatah akili.png',
+      img: '/strukturOrganisasi/list/Ricky Alfatah akili.png',
       jabatan: 'Kerani PA',
       nama: 'Ricky Alfatah',
     },
     {
-      img: '../../public/strukturOrganisasi/list/meysilia michell rawung.png',
+      img: '/strukturOrganisasi/list/meysilia michell rawung.png',
       jabatan: 'Kerani PI',
       nama: 'Meysilia Michell',
     },
     {
-      img: '../../public/strukturOrganisasi/list/Sicillia Ayom Sari.png',
+      img: '/strukturOrganisasi/list/Sicillia Ayom Sari.png',
       jabatan: 'Juru Uang PI',
       nama: 'Sicillia Ayom Sari',
     },
     {
-      img: '../../public/strukturOrganisasi/list/Khalifah Rahmat.png',
+      img: '/strukturOrganisasi/list/Khalifah Rahmat.png',
       jabatan: 'Juru Uang PA',
       nama: 'Khalifah Rahmat',
     },
@@ -92,7 +92,7 @@ const StrukturOrganisasi = () => {
       <div className="content-struktur-organisasi flex flex-col justify-center items-center">
         <p className="mb-2">Berikut adalah struktur organisasi Pramuka SMAN 1 Poso:</p>
         <img
-          src="../../public/strukturOrganisasi/struktur.png"
+          src="/strukturOrganisasi/struktur.png"
           alt="Profil Pramuka SMAN 1 Poso"
           className="w-full max-w-[700px] h-auto object-cover rounded-lg mb-8 object-contain"
         />

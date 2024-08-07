@@ -6,34 +6,34 @@ import "slick-carousel/slick/slick-theme.css";
 
 const strukturData = [
   {
-    img: "../../public/slider/1.png",
+    img: "/slider/1.png",
   },
   {
-    img: "../../public/slider/2.png",
+    img: "/slider/2.png",
   },
   {
-    img: "../../public/slider/3.png",
+    img: "/slider/3.png",
   },
   {
-    img: "../../public/slider/4.png",
+    img: "/slider/4.png",
   },
   {
-    img: "../../public/slider/5.png",
+    img: "/slider/5.png",
   },
   {
-    img: "../../public/slider/6.png",
+    img: "/slider/6.png",
   },
   {
-    img: "../../public/slider/7.png",
+    img: "/slider/7.png",
   },
   {
-    img: "../../public/slider/8.png",
+    img: "/slider/8.png",
   },
   {
-    img: "../../public/slider/9.png",
+    img: "/slider/9.png",
   },
   {
-    img: "../../public/slider/10.png",
+    img: "/slider/10.png",
   },
 ];
 
