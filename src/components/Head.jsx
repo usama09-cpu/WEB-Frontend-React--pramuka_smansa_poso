@@ -63,7 +63,7 @@ const Head = () => {
           Bungtomo & Cut Nyak Dien
         </h1>
         <h1 className="text-xl md:text-[20px] lg:text-[20px] font-bold text-primary-500 text-center mx-4">
-          01-025 & 01-026
+          01-035 & 01-036
         </h1>
       </div>
       <div className="social-icons flex space-x-4 mb-4">
