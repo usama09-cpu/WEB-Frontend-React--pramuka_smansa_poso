@@ -13,7 +13,7 @@ const Profil = () => {
           <p className="text-justify leading-relaxed text-gray-700 md:text-lg lg:text-xl">
             <span className="text-primary-500 font-bold">Pramuka SMAN 1 Poso</span> - dengan bangga mempersembahkan Ambalan Bung Tomo
             dan Cut Nyak Dien, adalah bagian tak terpisahkan dari perjalanan
-            kepanduan di tanah air. Dengan nomor gugus depan 01-025 dan 01-026,
+            kepanduan di tanah air. Dengan nomor gugus depan 01-035 dan 01-036,
             pramuka ini berkomitmen untuk mencetak generasi muda yang tangguh,
             mandiri, dan berjiwa kepemimpinan. Berlokasi di Jl. Talasa No.6,
             Lawanga, Kec. Poso Kota Utara, Kabupaten Poso, Sulawesi Tengah 94615,
