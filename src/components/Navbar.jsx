@@ -24,7 +24,7 @@ const Navbar = () => {
                     <div className="lg:hidden fixed right-5 top-5">
                         <button
                             onClick={handleToggle}
-                            className="p-3 bg-white/90 rounded-lg text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5"
+                            className={`p-3 bg-white/90 ${!isOpen ? 'block' : 'hidden'} rounded-lg text-sm  font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5`}
                             aria-expanded={isOpen}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`text-primary-500 ${isOpen ? 'hidden' : 'block'}`}>
@@ -32,9 +32,9 @@ const Navbar = () => {
                                 <path d="M7 12h13"></path>
                                 <path d="M10 18h10"></path>
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`text-primary-500 ${isOpen ? 'block' : 'hidden'}`}>
+                            {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`text-primary-500 ${isOpen ? 'block' : 'hidden'}`}>
                                 <path d="M6 18L18 6M6 6l12 12" />
-                            </svg>
+                            </svg> */}
                         </button>
                     </div>
                 </div>
