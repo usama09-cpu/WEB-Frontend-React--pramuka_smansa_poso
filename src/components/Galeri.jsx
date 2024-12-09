@@ -19,27 +19,26 @@ const Galeri = () => {
       img: '/galeri/camp 1000 megalitikum.jpeg',
       alt: '',
       title: 'Camp 1000 Megalitikum 2023',
-      link: '', // ganti dengan link yang sesuai
+      link: '',
     },
     {
       img: '/galeri/hari lingkungan hidup sedunia.jpeg',
       alt: '',
       title: 'Hari Lingkungan Hidup Sedunia 2024',
-      link: '', // ganti dengan link yang sesuai
+      link: '',
     },
     {
       img: '/galeri/pelantikan bantara.jpeg',
       alt: '',
       title: 'Pelantikan Bantara 2023',
-      link: '', // ganti dengan link yang sesuai
+      link: '',
     },
     {
       img: '/galeri/mubes.jpeg',
       alt: '',
       title: 'Mubes 2024',
-      link: '', // ganti dengan link yang sesuai
+      link: '',
     },
-    // Tambahkan data lainnya jika diperlukan
   ];
 
   const settings = {

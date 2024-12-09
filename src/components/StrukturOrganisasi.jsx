@@ -85,7 +85,7 @@ const StrukturOrganisasi = () => {
   };
 
   return (
-    <div className="profil mt-20 px-6 lg:px-20 pt-24" id='StrukturOrganisasi'>
+    <div className="mt-20 px-6 lg:px-20 pt-24" id='StrukturOrganisasi'>
       <h1 className="text-2xl md:text-[24px] lg:text-[28px] font-bold text-primary-500 text-center mb-2">
         Struktur Organisasi
       </h1>

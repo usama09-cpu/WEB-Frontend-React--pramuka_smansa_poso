@@ -43,7 +43,7 @@ const Foot = () => {
           <p className="inline-block text-sm mt-2">Created by : </p>
           &nbsp;
           <a
-          className="text-sm mt-2 hover:text-gray-400 underline"
+            className="text-sm mt-2 hover:text-gray-400 underline"
             href="https://www.instagram.com/uusaamaa_/"
             target="_blank"
             rel="noopener noreferrer"
