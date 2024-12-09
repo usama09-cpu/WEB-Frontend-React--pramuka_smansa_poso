@@ -14,7 +14,7 @@ const Foot = () => {
               Jl. Talasa No.6, Lawanga, Kec. Poso Kota Utara, Kabupaten Poso,
               Sulawesi Tengah 94615
             </p>
-            <p className="mt-2">Telepon:</p>
+            {/* <p className="mt-2">Telepon:</p> */}
           </div>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a
