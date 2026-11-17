@@ -1,5 +1,28 @@
 import { FaFacebook, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
+const socialLinks = [
+  {
+    icon: <FaInstagram className="text-2xl hover:text-gray-400" />,
+    href: "https://www.instagram.com/scout_smansaposo/",
+    label: "Instagram",
+  },
+  {
+    icon: <FaFacebook className="text-2xl hover:text-gray-400" />,
+    href: "#",
+    label: "Facebook",
+  },
+  {
+    icon: <FaWhatsapp className="text-2xl hover:text-gray-400" />,
+    href: "#",
+    label: "WhatsApp",
+  },
+  {
+    icon: <FaYoutube className="text-2xl hover:text-gray-400" />,
+    href: "#",
+    label: "YouTube",
+  },
+];
+
 const Foot = () => {
   return (
     <footer
@@ -14,29 +37,23 @@ const Foot = () => {
               Jl. Talasa No.6, Lawanga, Kec. Poso Kota Utara, Kabupaten Poso,
               Sulawesi Tengah 94615
             </p>
-            {/* <p className="mt-2">Telepon:</p> */}
           </div>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a
-              href="https://www.instagram.com/scout_smansaposo/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram className="text-2xl hover:text-gray-400" />
-            </a>
-            <a href="#" rel="noopener noreferrer">
-              <FaFacebook className="text-2xl hover:text-gray-400" />
-            </a>
-            <a href="#" rel="noopener noreferrer">
-              <FaWhatsapp className="text-2xl hover:text-gray-400" />
-            </a>
-            <a href="#" rel="noopener noreferrer">
-              <FaYoutube className="text-2xl hover:text-gray-400" />
-            </a>
+            {socialLinks.map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel="noopener noreferrer"
+                aria-label={item.label}
+              >
+                {item.icon}
+              </a>
+            ))}
           </div>
         </div>
         <div className="text-center mt-6">
-          <p className="test-sm">
+          <p className="text-sm">
             &copy; {new Date().getFullYear()} PRAMUKA SMAN 1 POSO. All rights
             reserved.
           </p>
@@ -47,7 +64,9 @@ const Foot = () => {
             href="https://www.instagram.com/uusaamaa_/"
             target="_blank"
             rel="noopener noreferrer"
-          >it_wrhs__</a>
+          >
+            it_wrhs__
+          </a>
         </div>
       </div>
     </footer>

@@ -1,5 +1,13 @@
 import { useState, useEffect } from 'react';
 
+const navLinks = [
+    { name: 'Beranda', href: '#Head', id: 'Head' },
+    { name: 'Profil', href: '#Profil', id: 'Profil' },
+    { name: 'Struktur Organisasi', href: '#StrukturOrganisasi', id: 'StrukturOrganisasi' },
+    { name: 'Galeri', href: '#Galeri', id: 'Galeri' },
+    { name: 'Kontak', href: '#Foot', id: 'Foot' },
+];
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
@@ -10,7 +18,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = document.querySelectorAll('div[id]'); // Ganti dengan div yang memiliki id
+            const sections = document.querySelectorAll('#Head, #Profil, #StrukturOrganisasi, #Galeri, #Foot');
             let currentSection = '';
 
             sections.forEach((section) => {
@@ -24,7 +32,9 @@ const Navbar = () => {
             setActiveSection(currentSection);
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -36,53 +46,25 @@ const Navbar = () => {
                 <div className="relative flex items-center justify-center h-12">
                     {/* Navbar Desktop */}
                     <div className="hidden lg:flex items-center justify-center gap-8 rounded-full bg-white/90 px-10 py-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5">
-                        <a
-                            href="#Head"
-                            className={`text-sm font-medium cursor-pointer transition-all duration-200 ${
-                                activeSection === 'Head' ? 'underline text-primary-500' : 'hover:text-primary-400'
-                            }`}
-                        >
-                            Beranda
-                        </a>
-                        <a
-                            href="#Profil"
-                            className={`text-sm font-medium cursor-pointer transition-all duration-200 ${
-                                activeSection === 'Profil' ? 'underline text-primary-500' : 'hover:text-primary-400'
-                            }`}
-                        >
-                            Profil
-                        </a>
-                        <a
-                            href="#StrukturOrganisasi"
-                            className={`text-sm font-medium cursor-pointer transition-all duration-200 ${
-                                activeSection === 'StrukturOrganisasi' ? 'underline text-primary-500' : 'hover:text-primary-400'
-                            }`}
-                        >
-                            Struktur Organisasi
-                        </a>
-                        <a
-                            href="#Galeri"
-                            className={`text-sm font-medium cursor-pointer transition-all duration-200 ${
-                                activeSection === 'Galeri' ? 'underline text-primary-500' : 'hover:text-primary-400'
-                            }`}
-                        >
-                            Galeri
-                        </a>
-                        <a
-                            href="#Foot"
-                            className={`text-sm font-medium cursor-pointer transition-all duration-200 ${
-                                activeSection === 'Foot' ? 'underline text-primary-500' : 'hover:text-primary-400'
-                            }`}
-                        >
-                            Kontak
-                        </a>
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.id}
+                                href={link.href}
+                                className={`text-sm font-medium cursor-pointer transition-all duration-200 ${
+                                    activeSection === link.id ? 'underline text-primary-500' : 'hover:text-primary-400'
+                                }`}
+                            >
+                                {link.name}
+                            </a>
+                        ))}
                     </div>
 
                     {/* Toggle Button */}
                     <div className="lg:hidden fixed right-5 top-5">
                         <button
                             onClick={handleToggle}
-                            className={`p-3 bg-white/90 rounded-lg text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5`}
+                            className="p-3 bg-white/90 rounded-lg text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5"
+                            aria-label="Toggle Menu"
                             aria-expanded={isOpen}
                         >
                             <svg
@@ -100,9 +82,9 @@ const Navbar = () => {
                                     <path d="M6 18L18 6M6 6l12 12" />
                                 ) : (
                                     <>
-                                        <path d="M4 6h16"></path>
-                                        <path d="M7 12h13"></path>
-                                        <path d="M10 18h10"></path>
+                                        <path d="M4 6h16" />
+                                        <path d="M7 12h13" />
+                                        <path d="M10 18h10" />
                                     </>
                                 )}
                             </svg>
@@ -114,12 +96,13 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div
                 className={`fixed top-0 right-0 w-full h-screen backdrop-blur-sm z-50 flex flex-col items-center justify-center transition-all duration-300 ease-in-out transform ${
-                    isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+                    isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
                 } lg:hidden`}
             >
                 <button
                     onClick={handleToggle}
                     className="absolute top-4 right-4 inline-flex items-center justify-center p-2 rounded-md text-zinc-800 hover:text-primary-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+                    aria-label="Tutup Menu"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -135,41 +118,20 @@ const Navbar = () => {
                         <path d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
-                <a
-                    href="#Head"
-                    className="text-primary-500 font-semibold text-lg hover:text-primary-400 transition-all duration-200 my-2"
-                    onClick={handleToggle}
-                >
-                    Beranda
-                </a>
-                <a
-                    href="#Profil"
-                    className="text-zinc-800 text-lg hover:text-primary-400 transition-all duration-200 my-2"
-                    onClick={handleToggle}
-                >
-                    Profil
-                </a>
-                <a
-                    href="#StrukturOrganisasi"
-                    className="text-zinc-800 text-lg hover:text-primary-400 transition-all duration-200 my-2"
-                    onClick={handleToggle}
-                >
-                    Struktur Organisasi
-                </a>
-                <a
-                    href="#Galeri"
-                    className="text-zinc-800 text-lg hover:text-primary-400 transition-all duration-200 my-2"
-                    onClick={handleToggle}
-                >
-                    Galeri
-                </a>
-                <a
-                    href="#Foot"
-                    className="text-zinc-800 text-lg hover:text-primary-400 transition-all duration-200 my-2"
-                    onClick={handleToggle}
-                >
-                    Kontak
-                </a>
+                {navLinks.map((link) => (
+                    <a
+                        key={link.id}
+                        href={link.href}
+                        className={`text-lg transition-all duration-200 my-2 ${
+                            activeSection === link.id
+                                ? 'text-primary-500 font-semibold'
+                                : 'text-zinc-800 hover:text-primary-400'
+                        }`}
+                        onClick={handleToggle}
+                    >
+                        {link.name}
+                    </a>
+                ))}
             </div>
         </nav>
     );

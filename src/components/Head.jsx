@@ -4,36 +4,39 @@ import { FaFacebook, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const strukturData = [
+const sliderData = [
+  { img: "/slider/1.png" },
+  { img: "/slider/2.png" },
+  { img: "/slider/3.png" },
+  { img: "/slider/4.png" },
+  { img: "/slider/5.png" },
+  { img: "/slider/6.png" },
+  { img: "/slider/7.png" },
+  { img: "/slider/8.png" },
+  { img: "/slider/9.png" },
+  { img: "/slider/10.png" },
+];
+
+const socialLinks = [
   {
-    img: "/slider/1.png",
+    icon: <FaInstagram />,
+    href: "https://www.instagram.com/scout_smansaposo/",
+    label: "Instagram",
   },
   {
-    img: "/slider/2.png",
+    icon: <FaFacebook />,
+    href: "#",
+    label: "Facebook",
   },
   {
-    img: "/slider/3.png",
+    icon: <FaWhatsapp />,
+    href: "#",
+    label: "WhatsApp",
   },
   {
-    img: "/slider/4.png",
-  },
-  {
-    img: "/slider/5.png",
-  },
-  {
-    img: "/slider/6.png",
-  },
-  {
-    img: "/slider/7.png",
-  },
-  {
-    img: "/slider/8.png",
-  },
-  {
-    img: "/slider/9.png",
-  },
-  {
-    img: "/slider/10.png",
+    icon: <FaYoutube />,
+    href: "#",
+    label: "YouTube",
   },
 ];
 
@@ -66,45 +69,30 @@ const Head = () => {
           01-035 & 01-036
         </h1>
       </div>
+
       <div className="social-icons flex space-x-4 mb-4">
-        <a
-          href="https://www.instagram.com/scout_smansaposo/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 lg:text-2xl md:text-2xl"
-        >
-          <FaInstagram />
-        </a>
-        <a
-          href="#"
-          rel="noopener noreferrer"
-          className="text-gray-400 lg:text-2xl md:text-2xl"
-        >
-          <FaFacebook />
-        </a>
-        <a
-          href="#"
-          rel="noopener noreferrer"
-          className="text-gray-400 lg:text-2xl md:text-2xl"
-        >
-          <FaWhatsapp />
-        </a>
-        <a
-          href="#"
-          rel="noopener noreferrer"
-          className="text-gray-400 lg:text-2xl md:text-2xl"
-        >
-          <FaYoutube />
-        </a>
+        {socialLinks.map((item, index) => (
+          <a
+            key={index}
+            href={item.href}
+            target={item.href.startsWith("http") ? "_blank" : undefined}
+            rel="noopener noreferrer"
+            aria-label={item.label}
+            className="text-gray-400 lg:text-2xl md:text-2xl"
+          >
+            {item.icon}
+          </a>
+        ))}
       </div>
+
       <div className="slider w-full max-w-[600px] overflow-hidden border-x-2 border-x-black">
         <Slider {...settings}>
-          {strukturData.map((item, index) => (
+          {sliderData.map((item, index) => (
             <div key={index} className="p-4 flex justify-center">
               <img
                 src={item.img}
-                alt={`Slide ${index + 4}`}
-                className="w-full max-w-[600px] h-auto object-cover object-contain"
+                alt={`Slide ${index + 1}`}
+                className="w-full max-w-[600px] h-auto object-contain"
               />
             </div>
           ))}
